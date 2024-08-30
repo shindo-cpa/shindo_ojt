@@ -1299,7 +1299,7 @@
     width: calc(50%);
     height: 500px;
     margin: 5px;
-    background-image: url(./img/_1022206.jpg);
+    background-image: url(./img/1022206.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     text-align: left;
@@ -1344,7 +1344,7 @@
 .cpass2-right1{
     margin-bottom: 5px;
     height: 245px;
-    background-image: url(./img/_1022256.jpg);
+    background-image: url(./img/1022256.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -1354,7 +1354,7 @@
 .cpass2-right2{
     margin-top: 10px;
     height: 245px;
-    background-image: url(./img/_1022231.jpg);
+    background-image: url(./img/1022231.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
