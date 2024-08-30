@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="business.css">
+    <title>CPA事業紹介</title>
+</head>
+<body>
+    <header>
+        <div class="header-wrap">
+            <img src="./img/logo.png" alt="CPAlogo">
+            <div class="menu-wrap"></div>
+            <div class="menu">
+                <ul>
+                    <li class="home-menu"><a href="./home.html">Home</a></li>
+                    <li class="business-menu">
+                        <a href="./business.html">Business</a>
+                        <ul class="dropdown__lists">
+                            <li class="dropdown__list"><a href="./school.html">CPA会計学院</a></li>
+                            <li class="dropdown__list"><a href="./learning.html">CPAラーニング</a></li>
+                            <li class="dropdown__list"><a href="./next.html">CPAネクスト</a></li>
+                            <li class="dropdown__list"><a href="./jobs.html">CPAジョブズ</a></li>
+                            <li class="dropdown__list"><a href="./cpasscareer.html">CPASSキャリア</a></li>
+                            <li class="dropdown__list"><a href="./cpass.html">CPASS</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>        
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="home">
+            <div class="home-wrap">
+                <a href="./business.html">私たちは<br class="home-wrap-spbr">人の可能性を広げ<br>
+                   人生を豊かにする<br class="home-wrap-spbr">応援をします</a>
+                    <video id="video" src="./img/まる.mp4" webkit-playsinline playsinline muted autoplay loop></video>
+            </div>
+
+            <div class="carousel">
+                <a class="carusel1" href="./school.html"><img src="./img/home-carousel1.png" width="100%"></a>
+                <a class="carusel1" href="./learning.html"><img src="./img/home-carousel2.png" width="100%"></a>
+                <a class="carusel1" href="./next.html"><img src="./img/home-carousel3.png" width="100%"></a>
+                <a class="carusel1" href="./jobs.html"><img src="./img/home-carousel4.png" width="100%"></a>
+                <a class="carusel1" href="./cpasscareer.html"><img src="./img/home-carousel5.png" width="100%"></a>
+                <a class="carusel1" href="./cpass.html"><img src="./img/home-carousel6.png" width="100%"></a>
+            </div>    
+        </div>
+
+
+    </main>
+    
+    
+</body>
+</html>
+
+
+<!--<script>
+    const img_src = ["./img/home-carousel1.png", "./img/home-carousel2.png", "./img/home-carousel3.png","./img/home-carousel4.png","./img/home-carousel5.png","./img/home-carousel6.png"];
+    let num = -1;
+
+    function slide_time() {
+      if (num === 6) {
+        num = 2;
+      } else {
+        num++;
+      }
+      document.getElementById("slide_img").src = img_src[num];
+    }
+
+    setInterval(slide_time, 2000);
+  </script>-->
