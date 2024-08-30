@@ -1,0 +1,1361 @@
+
+.body{
+    margin: auto;
+}
+
+
+.header-wrap {
+    position: fixed;
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    padding-top: 20px;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(rgb(255, 255, 255),rgba(255, 255, 255, 0));
+}
+
+.header-wrap img{
+    width: 150px;
+    height: 33.9px;
+    padding: 0px 50px;
+}
+
+
+.header-wrap .menu{
+    width: 250px;
+    padding-right: 50px;
+    justify-content: space-between;
+}
+
+.header-wrap ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-wrap li{
+    list-style: none;
+}
+
+.header-wrap a{
+    position: relative;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Helvetica';
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: black;
+}
+
+.header-wrap a::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #a70000;
+    bottom: -2px;
+    transform: scale(0, 1);
+    transform-origin: center top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
+    transition: transform 0.3s;   /*変形の時間*/
+    }
+    
+    .header-wrap a:hover::after {
+    transform: scale(1, 1); /*ホバー後、x軸方向に1（相対値）伸長*/
+    }
+
+    .header-wrap a:hover{
+    color: #a70000;
+}
+
+.business-menu .dropdown__lists {
+    display: none;/*デフォルトでは非表示の状態にしておく*/
+    position: absolute;
+    top: 60px;
+    right: 10px;
+}
+.business-menu:hover .dropdown__lists {
+    display: block;/*Gナビメニューにホバーしたら表示*/
+}
+.dropdown__list {
+    height: 50px;
+    transition: all .3s;
+    position: relative;
+    text-align: center;
+    right: 25px;
+}
+.dropdown__list:not(:first-child)::before{
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    text-align: center;
+}
+.dropdown__list:hover {
+}
+.dropdown__list a {
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    text-decoration: none;
+    position: relative;
+}
+.dropdown__list a::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    transform: rotate(135deg);
+    position: absolute;
+    right: 15px;
+    top: calc(50% - 5px);
+}
+
+.footer-wrap{ 
+    width: 100%;
+    height: 50px;
+    background: #a70000;
+    text-align: center;
+    bottom: 0;
+}
+
+.footer-wrap p{
+    margin: unset;
+    padding-top: 15px;
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Helvetica';
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    bottom: 0px;
+}
+
+.school-top{
+    margin: auto;
+    width: 100%;
+}
+
+.school-top img{
+    width: 100%;
+    margin-top: 0;
+}
+
+
+
+.goukaku{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(./img/gokaku_bg.png);
+    background-size: contain;
+    background-position: center;
+
+}
+
+.goukaku-wrap{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.goukaku786 {
+    width: calc(40%);
+    padding: 0px 50px;
+    text-align: center;
+}
+
+.goukaku786 img{
+    width: 90%;
+}
+
+.goukaku509 {
+    width: calc(40%);
+    padding: 0px 50px;
+    text-align: center;
+}
+
+.goukaku509 img{
+    width: 90%;
+}
+
+.goukaku2 {
+    margin: auto;
+    text-align: center;
+}
+
+.goukaku2 h2{
+    padding-top: 75px;
+    padding-bottom: 50px;
+    font-size: 30px;
+    font-family: 'helvetica', 'Yu Gothic';
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+@keyframes scroll-anim {
+    from {
+      opacity: 0;
+      scale: 0.9;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+
+  .goukaku2-2 {
+    animation: scroll-anim linear;
+    animation-timeline: view();
+    animation-range: entry 0% contain 20%;
+  }
+
+  
+  
+.goukaku2-2{
+    margin: auto;
+    width: 1280px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.goukaku2-2 h3{
+    font-size: 20px;
+    font-family: 'helvetica', 'Yu Gothic';
+    letter-spacing: 3px;
+}
+
+.goukaku2-2 p{
+    font-size: 15px;
+    font-family: 'helvetica', 'Yu Gothic';
+    letter-spacing: 3px;
+}
+
+.goukaku2-2 .rigth1{
+    overflow: visible;
+    width: calc(25%);
+}
+.goukaku2-2 .rigth1 img{
+    width: 100%;
+}
+
+.goukaku2-2 img:hover {
+    transform: scale(1.1,1.1);
+    transition-duration: 0.5s;
+    }
+
+.goukaku2-2 .rigth2{
+    width: calc(25%);
+}
+.goukaku2-2 .rigth2 img{
+    width: 100%;
+}
+
+.goukaku2-2 .left1{
+    width: calc(25%);
+}
+.goukaku2-2 .left1 img{
+    width: 100%;
+}
+.goukaku2-2 .left2{
+    width: calc(25%);
+}
+.goukaku2-2 .left2 img{
+    width: 100%;
+}
+
+
+.goukaku2-2 .rigth{
+    width: calc(25%);
+}
+.goukaku2-2 .rigth img{
+    width: 100%;
+}
+
+.goukaku2-2 .center{
+    width: calc(25%);
+}
+.goukaku2-2 .center img{
+    width: 100%;
+}
+.goukaku2-2 .left{
+    width: calc(25%);
+}
+.goukaku2-2 .left img{
+    width: 100%;
+}
+
+.goukaku-next-wrap{
+    width: 100%;
+}
+
+.goukaku-next {
+    margin: auto;
+    width: 750px;
+    height: 450px;
+    overflow: hidden;
+    background: url(./img/icon/next_bg.png) no-repeat center center;
+    background-size: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.goukaku-next .goukaku-next-right{
+    width: calc(50%);
+    padding-left: 150px;
+}
+
+.goukaku-next-right img{
+    width: 200px;
+}
+
+.goukaku-next-left{
+    width: calc(50%);
+}
+
+.goukaku-next-left img{
+    width: 50px;
+}
+
+
+
+.learning-top{
+    margin: auto;
+    width: 100%;
+}
+
+.learning-top img{
+    width: 100%;
+}
+
+.mil{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    background: linear-gradient(0deg, rgb(179, 255, 231), rgb(255, 255, 255));
+}
+
+.mil img{
+    width: 80%;
+    padding-bottom: 50px;
+}
+
+
+.mil h2{
+    padding-top: 80px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    font-family: 'helvetica', 'Yu Gothic';
+    letter-spacing: 5px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.border {
+    margin: auto;
+    width: 5px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #eee;
+    /* アニメーションの命令 */
+    animation: colorAnime linear;
+    /* 可視範囲（スクロールポート）内でアニメーションさせる */
+    animation-timeline: view();
+    /* 可視範囲に入ってきてから完全に出るまでの間にアニメーション */
+    animation-range: cover;
+}
+
+/* 色をグレーから黒に変更 */
+@keyframes colorAnime {
+    form {
+        background-color: #b4dfca;
+    }
+
+    to {
+        background-color: #307e69;
+    }
+}
+
+
+.fly-r{
+    width: 750px;
+    position: absolute;
+    top: 500px;
+    right: calc(5%);
+}
+
+.fly-l{
+    width: 750px;
+    position: absolute;
+    top: 800px;
+    left: calc(5%);
+}
+
+.learning2 {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(./img/gokaku_bg.png);
+    background-size: contain;
+    background-position: center;
+
+}
+
+.learning3{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lesson-box{
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: calc(60%);
+    border: 1px solid grey;
+    border-radius: 30px;
+    background-image: url(./img/lesson-box-button_bg.png);
+    background-size: cover;
+}
+
+.lesson-box-title{
+    margin: auto;
+    padding: 20px 0px;
+    width: calc(90%);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.lesson-box-title h3{
+    text-align: center;
+    font-size: 25px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.lesson-box-title img{
+    width: 200px;
+    height: auto;
+}
+
+.lesson-box-button{
+    margin: auto;
+    width: calc(90%);
+    padding-bottom: 15px;
+}
+
+.lesson-box-listbox{
+    display: flex;
+    justify-content: space-between;
+}
+
+.lesson-box-listbox :hover {
+    transform: translateY(6px);
+    border-bottom: none;
+  }
+
+.lesson-box-list{
+    list-style: none;
+    width: calc(18%);
+    display: inline-block;
+    padding: 10px 0px;
+    background-color: #00957a;
+    border-bottom: 6px solid #005141;
+    border-radius: 15px;
+}
+
+.lesson-box-list :hover {
+    color: #005141;
+  }
+
+.lesson-box-list a{
+    text-decoration: none;
+    padding-left: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.next-top00{
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    text-align: center;
+}
+
+.next-top00-wrap{
+    margin: auto;
+    display: flex;
+}
+
+.next-top00-left video{
+    width: calc(60%);
+    margin-top: 150px;
+    padding-left: calc(55%);
+}
+
+.next-top00-right{
+    padding-left: calc(15%);
+    padding-top: calc(15%);
+}
+
+.next-top00-right h3{
+    writing-mode: vertical-rl;
+    font-size: 30px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+
+.next-top{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    background-color: #f1efed;
+}
+
+.next-top-wrap{
+    margin: auto;
+    width: 80%;
+    padding-top: 100px;
+}
+
+.next-top-wrap img {
+    width: 200px;
+    text-align: center;
+}
+
+.next-top-wrap h3{
+    font-size: 30px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.next-top-wrap p{
+    font-size: 20px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.next-top-wrap hr{
+    margin-top: 50px;
+    width: 40%;
+    height: 3px;
+    background-color: #a80000;
+    border: none;
+    color: #a80000;
+    border-radius: 5px;
+}
+
+
+.next-recomend{
+    margin: auto;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.border-next {
+    margin: auto;
+    width: 5px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #eee;
+    /* アニメーションの命令 */
+    animation: colorAnime linear;
+    /* 可視範囲（スクロールポート）内でアニメーションさせる */
+    animation-timeline: view();
+    /* 可視範囲に入ってきてから完全に出るまでの間にアニメーション */
+    animation-range: cover;
+}
+
+/* 色をグレーから黒に変更 */
+@keyframes colorAnime {
+    form {
+        background-color: #f5f5f5;
+    }
+
+    to {
+        background-color: #a80000;
+    }
+}
+
+.next-recomend1{
+    margin: auto;
+    margin-top: 100px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.next-recomend-img1{
+    width: 400px;
+    margin-right: 50px;
+    text-align: center;
+    background-image: url(./img/icon/next_p_bg_1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.next-recomend-img1 img{
+    width: 300px;
+}
+.next-recomend-letter{
+    width: 400px;
+    vertical-align: middle;
+    padding-top: 100px;
+}
+
+.next-recomend2{
+    margin: auto;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.next-recomend-img2{
+    width: 400px;
+    margin-right: 50px;
+    text-align: center;
+    background-image: url(./img/icon/next_p_bg_2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.next-recomend-img2 img{
+    width: 250px;
+}
+
+.next-recomend3{
+    margin: auto;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.next-recomend-img3{
+    width: 400px;
+    margin-right: 50px;
+    text-align: center;
+    background-image: url(./img/icon/next_p_bg_3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.next-recomend-img3 img{
+    width: 230px;
+}
+
+.jobs-title{
+    margin: auto;
+   width: 90%;
+    height: 70vh;
+    background-image: url(./img/skyscraper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 150px;
+    background-attachment: fixed;
+}
+
+.jobs-title-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+.jobs-title img{
+    width: 400px;
+    height: 400px;
+}
+
+.jobs-title h2{
+    padding-left: 100px;
+    padding-top: 100px;
+    color: #ffffff;
+    font-size: 30px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.jobs-point{
+    margin: auto;
+    margin-top: 50px;
+    width: auto;
+    height: 100vh;
+    background-image: url(./img/jobs-point-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.jobs-point1{
+    margin-left: 55%;
+    padding-top: 50px;
+    width: 400px;
+    height: calc(30%);
+    background-image: url(./img/jobs-point-circle.png);
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: right;
+} 
+
+.jobs-point1 h4{
+    font-size: 20px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.jobs-point1 p{
+    font-size: 15px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.jobs-point2{
+    margin-left: 20%;
+    padding-top: 0px;
+    padding-left: 165px;
+    width: 400px;
+    height: calc(30%);
+    background-image: url(./img/jobs-point-circle.png);
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: top left;
+} 
+
+.jobs-point2 h4{
+    font-size: 20px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.jobs-point2 p{
+    font-size: 15px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.jobs-point3{
+    margin-left: 55%;
+    padding-top: 100px;
+    width: 400px;
+    height: calc(30%);
+    background-image: url(./img/jobs-point-circle.png);
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: top left;
+} 
+
+.jobs-point3 h4{
+    font-size: 20px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.jobs-point3 p{
+    font-size: 15px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.jobs-skil{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    background-color: #def6f8;
+}
+
+.jobs-skil h3{
+    padding-top: 75px;
+    padding-bottom: 30px;
+    font-size: 25px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.jobs-skil h3.anime {
+    animation: scroll-anime ease;
+    animation-timeline: view();
+  }
+
+
+
+
+.jobs-skil-slider-wrap{
+    display: flex;
+    margin: unset;
+}
+
+
+
+.jobs-skil-slider{
+    margin: auto;
+    margin-bottom: 20px;
+    width: 99%;
+    padding-left: unset;
+}
+
+
+.jobs-skil-slider li{
+    margin-left: 15px;
+    list-style: none;
+    display: inline-block;
+    width: 200px; 
+    height: 80px;
+    background-color: #ffffff;
+    border-radius: 50px;
+}
+
+.jobs-skil-slider p{
+    padding-top: 5px;
+    color: #1d6eab;
+    font-size: 20px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+.jobs-skil-slider2{
+    margin: auto;
+    width: 99%;
+    padding-right: unset;
+    margin-bottom: 30px;
+}
+
+.jobs-skil-slider2 li{
+    margin-left: 15px;
+    list-style: none;
+    display: inline-block;
+    width: 200px; 
+    height: 80px;
+    background-color: #1d6eab;
+    border-radius: 50px;
+}
+
+.jobs-skil-slider2 p{
+    padding-top: 5px;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.cpasscareer_top{
+    height: 100vh;
+    background-image: url(./img/cpassc_top_BG.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.cpasscareer_top_wrap{
+    width: calc(50%);
+    margin-left: 10px;
+    padding-top: 200px;
+    text-align: center;
+}
+.cpasscareer_top_wrap h2{
+    color: #ffffff;
+    font-size: 50px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.cpasscareer_top_wrap img{
+    width: 500px;
+}
+
+.cpasscareer2{
+    margin: unset;
+    padding: unset;
+    width: 100%;
+    background: url(./img/5395479.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+
+.cpasscareer2 h3{
+    margin: unset;
+    padding: unset;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    color: #b8860b;
+    font-size: 30px;
+    font-family: 'Yu mincho', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.cpasscareer2 p{
+    margin: unset;
+    padding: unset;
+    padding-bottom: 100px;
+   font-size: 17px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.cpasscareer3{
+    margin: unset;
+    padding: unset;
+    top: 0%;
+    width: 100%;
+    text-align: center;
+    background: #f8f8ff;
+}
+
+.cpasscareer3 h3{
+    margin: unset;
+    padding: unset;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    color: #152a49;
+    font-size: 30px;
+    font-family: 'Yu mincho', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.cpasscareer3 p{
+    margin: unset;
+    padding: unset;
+    padding-bottom: 100px;
+   font-size: 17px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.grid  {
+    width: 50%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-inline: auto;
+    /* 以下gridレイアウト用 */
+    display: grid;
+    gap: 50px;/* 画像間の余白 */
+    grid-auto-flow: dense;/* 隙間を埋めながら配置 */
+    grid-template-columns: repeat(7); /* カラム数を設定 */
+    grid-template-rows: 150px 150px 150px ;
+}
+.item:first-child {
+	grid-column: 1/3;
+	grid-row: 1/2;
+}
+.item:nth-child(2) {
+	grid-column: 1/3;
+	grid-row: 2/4;
+}
+.item:nth-child(3) {
+	grid-column: 3/7;
+	grid-row: 1/3;
+}
+.item:nth-child(4) {
+	grid-column: 3/7;
+	grid-row: 3/4;
+}
+.item:nth-child(5) {
+	grid-column: 1/5;
+	grid-row: 4/6;
+}
+.item:nth-child(6) {
+	grid-column: 5/7;
+	grid-row: 3/5;
+}
+.item:nth-child(7) {
+	grid-column: 5/7;
+	grid-row: 5/6;
+}
+/* アスペクト比設定 */
+.item {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;	
+}
+
+  
+  .item {
+    border: 2px solid #b8860b;
+    background-color: #ffffff;
+    padding: 0.2rem;
+    text-align: center;
+    vertical-align:center;
+    display: inline-block;
+    vertical-align: middle;
+    align-items: center;
+  }
+
+  .item h1{
+    color: #b8860b;
+    font-size: 20px;
+    font-family: 'Yu mincho', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+
+  }
+
+  .item h3{
+    font-size: 25px;
+    font-family: 'Yu mincho', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .item span{
+    font-size: 1.5em;
+    letter-spacing: 2px;
+  }
+
+  .item table{
+    padding-top: 100px;
+    width: 90%;
+    color: #ffffff;
+    align-items: center;
+    margin: auto;
+    border-collapse: 20px;
+    font-size: 17px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+
+  .item tr{
+    background-color: #b8860b;
+    padding: 10px;
+    padding: 20px;
+  }
+
+  .item td{
+    padding: 10px 20px;
+  }
+
+  .grid2  {
+    width: 100%;
+    padding-bottom: 50px;
+    margin-inline: auto;
+    /* 以下gridレイアウト用 */
+    display: grid;
+    gap: 0px;/* 画像間の余白 */
+    grid-auto-flow: dense;/* 隙間を埋めながら配置 */
+    grid-template-columns: repeat(3); /* カラム数を設定 */
+    grid-template-rows: 400px 400px;
+}
+.item2:first-child {
+	grid-column: 1/2;
+	grid-row: 1/2;
+    background-image: url(./img/grid2.jpg);
+    background-size: cover;
+}
+.item2:nth-child(2) {
+	grid-column: 2/3;
+	grid-row: 1/2;
+    background-image: url(./img/grid2_1.jpg);
+    background-size: cover;
+}
+.item2:nth-child(3) {
+	grid-column: 1/2;
+	grid-row: 2/3;
+    background-image: url(./img/grid2_3.jpg);
+    background-size: cover;
+}
+.item2:nth-child(4) {
+	grid-column: 2/3;
+	grid-row: 2/3;
+    background-image: url(./img/grid2_4.jpg);
+    background-size: cover;
+}
+
+/* アスペクト比設定 */
+.item2 {
+    position   : relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;	
+}
+
+  
+  .item2 {
+    text-align: center;
+    vertical-align:center;
+    display: inline-block;
+    vertical-align: middle;
+    align-items: center;
+  }
+
+.item2 p{
+    padding-top: calc(15%);
+    color: #ffffff;
+    font-size: 25px;
+    font-family: 'Yu mincho', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+    opacity:		1;
+}
+
+.item2 .item2-2 {
+    position: relative;
+    color: #ffffff;
+    font-size: 15px;
+    font-family: 'Yu mincho', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+.item2:hover{
+    background: #152a49;
+}
+
+.item2 .item2-2 {
+	opacity:		0;
+  }
+
+.item2:hover .item2-2 {
+	opacity:		1;
+  }
+
+.cpass_fv{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.cpass_fv_main{
+    width: 93%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.cpass_fv_main video{
+    width: 100%;
+}
+
+.cpass_fv_right{
+    width: 7%;
+    height: 100vh;
+    background-color: #b8c9e6;
+}
+
+.cpass_fv_right h2{
+    writing-mode: vertical-rl;
+    margin-top: 500px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 100px;
+    width: calc(100% - 600px);
+    margin-right: 500px;
+    color: #ffffff;
+}
+
+.cpass-main{
+    width: 100%;
+}
+
+.cpass-main img{
+    width: 100%;
+}
+
+.cpass1{
+    background-color: #b8c9e6;
+}
+.cpass1-wrap{
+    margin: auto;
+    width: 80%;
+    padding-top: 150px;
+    display: flex;
+    justify-content: space-around;
+    background-image: url(./img/握手.png);
+    background-position: left;
+    background-size: 60%;
+    background-repeat: no-repeat;
+}
+
+.cpass1-rigth p{
+    padding-top: 200px;
+    padding-left: 100px;
+    font-size: 22px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.cpass1-rigth h1{
+    padding-top: 50px;
+    padding-left: 100px;
+    font-size: 40px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.cpass1-left{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+.cpass1-left-icon img{
+    width: 100px;
+}
+
+.cpass1-left-img img{
+    width: 100%;
+}
+
+.cpass-kirikae {
+    margin-top: 10%;
+    width: 100%;
+    margin: auto;
+}
+
+.cpass-kirikae img{
+    width: 100%;
+    vertical-align:top;
+}
+
+.cpass2-wrap{
+    width: 100%;
+    text-align: center
+}
+
+.cpass2-wrap h3{
+    font-size: 25px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #575757;
+}
+
+.cpass2-wrap p{
+    padding: unset;
+    margin: unset;
+}
+
+.cpass2-wrap img{
+    width: 500px;
+}
+
+.cpass2-wrap2{
+    margin: auto;
+    width: 60%;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.cpass2-left{
+    width: calc(50%);
+    height: 500px;
+    margin: 5px;
+    background-image: url(./img/_1022206.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: left;
+    vertical-align: sub;
+}
+
+.cpass2-left p{
+    margin-top: 431px;
+    font-size: 20px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.cpass2-left span {
+    background: #000000;
+    padding: 10px;
+  }
+
+.cpass2-right{
+    width: calc(50%);
+    height: 500px;
+    margin: 5px;
+    text-align: left;
+    vertical-align: sub;
+    font-size: 20px;
+    font-family: 'helvetica', 'Yu Gothic';
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.cpass2-right span {
+    background: #000000;
+    padding: 10px;
+  }
+
+.cpass2-right p{
+    padding-top: 175px;
+}
+.cpass2-right1{
+    margin-bottom: 5px;
+    height: 245px;
+    background-image: url(./img/_1022256.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+
+.cpass2-right2{
+    margin-top: 10px;
+    height: 245px;
+    background-image: url(./img/_1022231.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
